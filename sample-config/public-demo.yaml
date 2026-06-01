@@ -1,0 +1,10 @@
+snapshot:
+  version: v0.1.0
+  scenario: tabletop_organization_v1
+  proof_case: tabletop_two_category_ordered_proof_v1
+  core_files:
+    - hephaestus/tool/types.py
+    - hephaestus/tool/safety.py
+    - hephaestus/atom/motion.py
+    - hephaestus/skill/grasp_policy.py
+    - hephaestus/task/registry.py

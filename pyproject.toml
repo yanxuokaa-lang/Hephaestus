@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hephaestus"
+version = "0.1.0"
+description = "Public core-code snapshot for the Hephaestus robotic-agent architecture."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.scripts]
+hephaestus = "hephaestus.cli.main:entrypoint"
+
+[tool.setuptools.packages.find]
+include = ["hephaestus*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = ["-p", "no:launch_testing", "-p", "no:launch_ros"]
